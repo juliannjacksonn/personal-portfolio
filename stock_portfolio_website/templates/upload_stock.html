@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Upload Stock Pitch</h2>
+    <form action="{{ url_for('upload_stock') }}" method="post">
+        <input type="text" name="ticker" placeholder="Ticker Symbol" required>
+        <textarea name="content" placeholder="Pitch Content" required></textarea>
+        <button type="submit">Upload</button>
+    </form>
+{% endblock %}
